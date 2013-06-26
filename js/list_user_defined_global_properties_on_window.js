@@ -11,6 +11,8 @@
     results = currentWindow.filter(function(prop) {
         return !iframe.contentWindow.hasOwnProperty(prop);
     });
+    // remove iframe
+    document.body.removeChild(iframe);
     // log an array of properties that are different
     console.log(results);
 }());
